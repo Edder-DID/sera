@@ -1,2 +1,170 @@
-<!Doctype hmtl>
-<html lang="es"
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATELIER | Colección de Moda</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- CABECERA MINIMALISTA -->
+    <header class="header">
+        <a href="#" class="logo">ATELIER</a>
+
+        <button class="menu-toggle" aria-label="Abrir menú">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
+
+        <nav class="nav-menu">
+            <a href="#novedades">Novedades</a>
+            <a href="#hombre">Hombre</a>
+            <a href="#mujer">Mujer</a>
+            <a href="#accesorios">Accesorios</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- BANNER SUPERIOR DISCRETO -->
+    <section class="collection-banner">
+        <p class="season-tag">TEMPORADA 2026</p>
+        <h1>Nueva Colección Esencial</h1>
+        <p class="subtitle">Cortes atemporales, materiales de alta calidad y diseño contemporáneo.</p>
+    </section>
+
+    <!-- CONTENIDO PRINCIPAL: CASILLEROS DE PRENDAS -->
+    <main class="catalog-container" id="novedades">
+        
+        <!-- Barra superior de catálogo -->
+        <div class="catalog-header">
+            <span>Mostrando 8 prendas</span>
+            <select aria-label="Ordenar por" class="sort-select">
+                <option value="destacados">Destacados</option>
+                <option value="precio-asc">Precio: menor a mayor</option>
+                <option value="precio-desc">Precio: mayor a menor</option>
+            </select>
+        </div>
+
+        <!-- CUADRÍCULA PROFESIONAL DE CASILLEROS -->
+        <div class="product-grid">
+
+            <!-- Casillero 1 -->
+            <article class="product-card">
+                <div class="image-wrapper">
+                    <span class="badge">NUEVO</span>
+                    <img src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80" alt="Chaqueta Minimalista">
+                    <button class="quick-view-btn">Ver detalles</button>
+                </div>
+                <div class="product-info">
+                    <h3>Chaqueta Estructurada</h3>
+                    <p class="category">Abrigos</p>
+                    <p class="price">S/ 249.00</p>
+                </div>
+            </article>
+
+            <!-- Casillero 2 -->
+            <article class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=600&q=80" alt="Polo Básico Algodón">
+                    <button class="quick-view-btn">Ver detalles</button>
+                </div>
+                <div class="product-info">
+                    <h3>Polo Esencial Algodón Pima</h3>
+                    <p class="category">Básicos</p>
+                    <p class="price">S/ 89.00</p>
+                </div>
+            </article>
+
+            <!-- Casillero 3 -->
+            <article class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=600&q=80" alt="Jean Corte Recto">
+                    <button class="quick-view-btn">Ver detalles</button>
+                </div>
+                <div class="product-info">
+                    <h3>Denim Corte Recto Vintage</h3>
+                    <p class="category">Pantalones</p>
+                    <p class="price">S/ 179.00</p>
+                </div>
+            </article>
+
+            <!-- Casillero 4 -->
+            <article class="product-card">
+                <div class="image-wrapper">
+                    <span class="badge badge-dark">EDICIÓN LIMITADA</span>
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=600&q=80" alt="Suéter Tejido">
+                    <button class="quick-view-btn">Ver detalles</button>
+                </div>
+                <div class="product-info">
+                    <h3>Suéter Tejido Oversize</h3>
+                    <p class="category">Punto</p>
+                    <p class="price">S/ 199.00</p>
+                </div>
+            </article>
+
+            <!-- Casillero 5 -->
+            <article class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80" alt="Camisa Lino">
+                    <button class="quick-view-btn">Ver detalles</button>
+                </div>
+                <div class="product-info">
+                    <h3>Camisa Lino Relaxed</h3>
+                    <p class="category">Camisas</p>
+                    <p class="price">S/ 159.00</p>
+                </div>
+            </article>
+
+            <!-- Casillero 6 -->
+            <article class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?auto=format&fit=crop&w=600&q=80" alt="Casaca Cuero">
+                    <button class="quick-view-btn">Ver detalles</button>
+                </div>
+                <div class="product-info">
+                    <h3>Casaca Biker Clásica</h3>
+                    <p class="category">Abrigos</p>
+                    <p class="price">S/ 349.00</p>
+                </div>
+            </article>
+
+            <!-- Casillero 7 -->
+            <article class="product-card">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80" alt="Pantalón Cargo">
+                    <button class="quick-view-btn">Ver detalles</button>
+                </div>
+                <div class="product-info">
+                    <h3>Pantalón Sastre Plisado</h3>
+                    <p class="category">Pantalones</p>
+                    <p class="price">S/ 189.00</p>
+                </div>
+            </article>
+
+            <!-- Casillero 8 -->
+            <article class="product-card">
+                <div class="image-wrapper">
+                    <span class="badge">NUEVO</span>
+                    <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=600&q=80" alt="Polera Urbana">
+                    <button class="quick-view-btn">Ver detalles</button>
+                </div>
+                <div class="product-info">
+                    <h3>Hoodie Heavyweight</h3>
+                    <p class="category">Urbano</p>
+                    <p class="price">S/ 169.00</p>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer" id="contacto">
+        <p>&copy; 2026 ATELIER STUDIO. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
