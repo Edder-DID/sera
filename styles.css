@@ -1,0 +1,291 @@
+/* =================================
+   1. CONFIGURACIÓN GENERAL
+================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #111111;
+    line-height: 1.5;
+}
+
+/* =================================
+   2. CABECERA Y MENÚ
+================================= */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 5%;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: #111111;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #444444;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s ease;
+}
+
+.nav-menu a:hover {
+    color: #000000;
+}
+
+/* Botón Hamburguesa */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #111111;
+}
+
+/* =================================
+   3. BANNER DE COLECCIÓN
+================================= */
+.collection-banner {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.season-tag {
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: #777777;
+    margin-bottom: 10px;
+}
+
+.collection-banner h1 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.collection-banner .subtitle {
+    color: #666666;
+    font-size: 1rem;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+/* =================================
+   4. CATÁLOGO Y CASILLEROS (GRID)
+================================= */
+.catalog-container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 40px 5% 80px;
+}
+
+.catalog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 0.85rem;
+    color: #666666;
+}
+
+.sort-select {
+    padding: 8px 12px;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    font-size: 0.85rem;
+    color: #111111;
+    cursor: pointer;
+}
+
+/* Cuadrícula de 4 columnas en escritorio */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 20px;
+}
+
+/* Tarjeta individual de prenda */
+.product-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor de imagen con proporción vertical 3:4 de moda */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    background-color: #f4f4f4;
+    overflow: hidden;
+    margin-bottom: 14px;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Efecto zoom elegante al pasar el mouse */
+.product-card:hover .image-wrapper img {
+    transform: scale(1.06);
+}
+
+/* Etiquetas superiores (NUEVO / EDICIÓN LIMITADA) */
+.badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #ffffff;
+    color: #111111;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 4px 8px;
+    z-index: 2;
+}
+
+.badge-dark {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* Botón que aparece suavemente sobre la foto */
+.quick-view-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%) translateY(15px);
+    width: 85%;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #111111;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .quick-view-btn {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.quick-view-btn:hover {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* Información de la prenda debajo de la foto */
+.product-info h3 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #111111;
+    margin-bottom: 4px;
+}
+
+.product-info .category {
+    font-size: 0.8rem;
+    color: #888888;
+    margin-bottom: 6px;
+}
+
+.product-info .price {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111111;
+}
+
+/* =================================
+   5. PIE DE PÁGINA
+================================= */
+.footer {
+    border-top: 1px solid #eeeeee;
+    text-align: center;
+    padding: 40px 20px;
+    font-size: 0.85rem;
+    color: #777777;
+}
+
+/* =================================
+   6. DISEÑO RESPONSIVE (TABLET Y MÓVIL)
+================================= */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        padding: 25px;
+        border-bottom: 1px solid #eeeeee;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .nav-menu.is-active {
+        display: flex;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en celulares */
+        gap: 20px 12px;
+    }
+
+    .collection-banner h1 {
+        font-size: 1.8rem;
+    }
+}
